@@ -1,7 +1,11 @@
-# SFG Brewery Configuration Service
-
-Source code in this repository is to support my online courses.
-
-Learn more about my courses below!
-* [Spring Boot Microservices with Spring Cloud](https://www.udemy.com/spring-boot-microservices-with-spring-cloud-beginner-to-guru/?couponCode=GIT_HUB2)
-
+## Jdbc as backend for Spring cloud config:
+* add spring-jdbc (spring-boot-starter-jdbc) dependency
+* add connector
+ *configure datasource in application properties/yml
+ * run with `jdbc` profile
+ * change default sql property if needed (depends on Dialect) - `spring.cloud.config.server.jdbc.sql`
+ 
+ ___
+ 
+ * configure explicitly JdbcEnvironmentRepository
+ * optionally configure JdbcTemplate
